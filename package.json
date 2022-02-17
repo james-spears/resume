@@ -1,0 +1,25 @@
+{
+  "name": "@jameone/resume",
+  "version": "0.0.0",
+  "description": "James Spears' C.V.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameone/resume.git"
+  },
+  "keywords": [
+    "resume",
+    "employment",
+    "software",
+    "developer"
+  ],
+  "author": "James Spears",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jameone/resume/issues"
+  },
+  "homepage": "https://github.com/jameone/resume#readme"
+}
