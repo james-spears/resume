@@ -1,5 +1,4 @@
 src/*
-resume.*
 !src/assets
 !src/res.cls
 !src/resume.tex
