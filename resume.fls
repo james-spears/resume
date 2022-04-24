@@ -239,10 +239,6 @@ INPUT /opt/texlive/texdir/texmf-dist/tex/latex/hyperref/pd1enc.def
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/hyperref/pd1enc.def
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/hyperref/pd1enc.def
 INPUT /opt/texlive/texdir/texmf-dist/tex/latex/hyperref/pd1enc.def
-INPUT /opt/texlive/texdir/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
-INPUT /opt/texlive/texdir/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
-INPUT /opt/texlive/texdir/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
-INPUT /opt/texlive/texdir/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
 INPUT /opt/texlive/texdir/texmf-dist/tex/generic/intcalc/intcalc.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/generic/intcalc/intcalc.sty
 INPUT /opt/texlive/texdir/texmf-dist/tex/generic/intcalc/intcalc.sty
