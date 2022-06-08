@@ -2,9 +2,9 @@
 
 | Actions                                                                                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Autogenerate PDF](https://github.com/jameone/resume/actions/workflows/on-push.yml/badge.svg)](https://github.com/jameone/resume/actions/workflows/on-push.yml)             |
-| [![Create Release](https://github.com/jameone/resume/actions/workflows/create-release.yml/badge.svg)](https://github.com/jameone/resume/actions/workflows/create-release.yml) |
-| [![Deploy to S3](https://github.com/jameone/resume/actions/workflows/deploy-to-s3.yml/badge.svg)](https://github.com/jameone/resume/actions/workflows/deploy-to-s3.yml)       |
+| [![Autogenerate PDF](https://github.com/jameswspears/resume/actions/workflows/on-push.yml/badge.svg)](https://github.com/jameswspears/resume/actions/workflows/on-push.yml)             |
+| [![Create Release](https://github.com/jameswspears/resume/actions/workflows/create-release.yml/badge.svg)](https://github.com/jameswspears/resume/actions/workflows/create-release.yml) |
+| [![Deploy to S3](https://github.com/jameswspears/resume/actions/workflows/deploy-to-s3.yml/badge.svg)](https://github.com/jameswspears/resume/actions/workflows/deploy-to-s3.yml)       |
 
 ## How to view
 
@@ -17,14 +17,14 @@ The recommended way to view the resume is in a web browser. Any PDF viewer can b
 You could also obtain a copy by cloning this repository.
 
 ```bash
-$ git clone https://github.com/jameone/resume.git
+$ git clone https://github.com/jameswspears/resume.git
 ```
 
 The compiled C.V. is located `./resume.pdf` relative to the installation path.
 
 ### Download latest release
 
-You can find the latest version on the release page [here](https://github.com/jameone/resume/releases).
+You can find the latest version on the release page [here](https://github.com/jameswspears/resume/releases).
 
 The compiled C.V. is located `./resume.pdf` relative to the extraction path.
 
@@ -34,4 +34,4 @@ There is a `.docx` (MS Word) formatted copy of the C.V. available for download [
 
 ## Issues
 
-If you happen to find a typo please use the issues page [here](https://github.com/jameone/resume/issues).
+If you happen to find a typo please use the issues page [here](https://github.com/jameswspears/resume/issues).

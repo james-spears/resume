@@ -1,5 +1,5 @@
 {
-  "name": "@jameone/resume",
+  "name": "@jameswspears/resume",
   "version": "0.0.5",
   "description": "James Spears' C.V.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jameone/resume.git"
+    "url": "git+https://github.com/jameswspears/resume.git"
   },
   "keywords": [
     "resume",
@@ -19,7 +19,7 @@
   "author": "James Spears",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jameone/resume/issues"
+    "url": "https://github.com/jameswspears/resume/issues"
   },
-  "homepage": "https://github.com/jameone/resume#readme"
+  "homepage": "https://github.com/jameswspears/resume#readme"
 }
