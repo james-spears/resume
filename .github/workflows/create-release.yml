@@ -21,4 +21,4 @@ jobs:
           body: |
             ${{ github.ref }} James has updated his resume!
           draft: false
-          prerelease: true
+          prerelease: false
