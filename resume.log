@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.1)  17 OCT 2023 01:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.1)  20 OCT 2023 20:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -379,7 +379,7 @@ File: ts1pag.fd 2001/06/04 font definitions for TS1/pag.
 {/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/opt/texlive
 /texdir/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `OT1/pag/m/it' in size <10> not available
-(Font)              Font shape `OT1/pag/m/sl' tried instead on input line 135.
+(Font)              Font shape `OT1/pag/m/sl' tried instead on input line 134.
  [2]
  ***********
 LaTeX2e <2023-06-01> patch level 1
