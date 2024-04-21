@@ -2,9 +2,7 @@
 
 | Actions                                                                                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Autogenerate PDF](https://github.com/jameswspears/resume/actions/workflows/on-push.yml/badge.svg)](https://github.com/jameswspears/resume/actions/workflows/on-push.yml)             |
-| [![Create Release](https://github.com/jameswspears/resume/actions/workflows/create-release.yml/badge.svg)](https://github.com/jameswspears/resume/actions/workflows/create-release.yml) |
-| [![Deploy to S3](https://github.com/jameswspears/resume/actions/workflows/deploy-to-s3.yml/badge.svg)](https://github.com/jameswspears/resume/actions/workflows/deploy-to-s3.yml)       |
+| [![Build](https://github.com/james-spears/resume/actions/workflows/main.yml/badge.svg)](https://github.com/james-spears/resume/actions/workflows/main.yml)             |
 
 ## How to view
 
@@ -17,21 +15,21 @@ The recommended way to view the resume is in a web browser. Any PDF viewer can b
 You could also obtain a copy by cloning this repository.
 
 ```bash
-$ git clone https://github.com/jameswspears/resume.git
+$ git clone https://github.com/james-spears/resume.git
 ```
 
 The compiled C.V. is located `./resume.pdf` relative to the installation path.
 
 ### Download latest release
 
-You can find the latest version on the release page [here](https://github.com/jameswspears/resume/releases).
+You can find the latest version on the release page [here](https://github.com/james-spears/resume/releases).
 
 The compiled C.V. is located `./resume.pdf` relative to the extraction path.
 
-### CRM friendly copies
+### Windows (MS Word) friendly copies
 
-There is a `.docx` (MS Word) formatted copy of the C.V. available for download [here](https://s3.amazonaws.com/james-spears.com/resume.docx). While the PDF version is intended to be optimized for human viewing, the `.docx` version is intended to be optimized for content ingestion and CRMs.
+There is a `.docx` (MS Word) formatted copy of the C.V. available for download [here](https://s3.amazonaws.com/james-spears.com/resume.docx).
 
 ## Issues
 
-If you happen to find a typo please use the issues page [here](https://github.com/jameswspears/resume/issues).
+If you happen to find a typo please use the issues page [here](https://github.com/james-spears/resume/issues).

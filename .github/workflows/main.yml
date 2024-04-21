@@ -111,3 +111,11 @@ jobs:
             } catch (error) {
               core.setFailed(error.message);
             }
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::989966476585:role/ci
+          aws-region: us-east-1
+
+      - name: Deploy static site to S3 bucket
+        run: aws s3 sync ./ s3://james-spears.com --delete --acl public-read
