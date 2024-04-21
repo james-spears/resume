@@ -65,12 +65,15 @@ jobs:
         run: git push
 
   version-bump:
+    permissions:
+      id-token: write
+      contents: read
     runs-on: ubuntu-latest
     needs: [autogenerate-pdf, autogenerate-docx]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-          
+
       - run: git config --global user.name 'James Spears 🤖'
       - run: git config --global user.email 'james.w.spears@gmail.com'
 
@@ -111,8 +114,9 @@ jobs:
             } catch (error) {
               core.setFailed(error.message);
             }
+
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::989966476585:role/ci
           aws-region: us-east-1
