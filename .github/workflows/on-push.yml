@@ -70,8 +70,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.REPO_PERSONAL_ACCESS_TOKEN }}
+          
       - run: git config --global user.name 'James Spears 🤖'
       - run: git config --global user.email 'james.w.spears@gmail.com'
 
@@ -97,7 +96,7 @@ jobs:
         env:
           RELEASE_TAG: ${{ env.version }}
         with:
-          github-token: "${{ secrets.REPO_PERSONAL_ACCESS_TOKEN }}"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             try {
               await github.rest.repos.createRelease({
