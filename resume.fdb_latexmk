@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1757197671.90221 "src/resume.tex" "resume.pdf" "resume" 1757197672.36476 0
+["pdflatex"] 1757197855.96102 "src/resume.tex" "resume.pdf" "resume" 1757197856.43054 0
   "/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/opt/texlive/texdir/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/texlive/texdir/texmf-dist/fonts/tfm/adobe/avantgar/pagd7t.tfm" 1136768653 2492 c3c1cdcee2dde7695628464fd5bab43c ""
@@ -67,9 +67,9 @@
   "/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1751336868 5523531 3095b98de6c7c823efc441a15f4e5550 ""
   "/opt/texlive/texdir/texmf-var/web2c/pdftex/pdflatex.fmt" 1751336947 3599578 59b7f3c177d5e6c1cb9ff1b49b3296ac ""
   "/opt/texlive/texdir/texmf.cnf" 1751336862 555 bd60ff59e4d560b42d96b004436f91d3 ""
-  "resume.aux" 1757197589.08768 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "src/res.cls" 1757197589.08868 25065 00878584ba637ae375b57ce6f6d58323 ""
-  "src/resume.tex" 1757197589.08868 8118 25e74e6f46ef981dbb65ec745d2fff85 ""
+  "resume.aux" 1757197781.55242 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "src/res.cls" 1757197781.55342 25065 00878584ba637ae375b57ce6f6d58323 ""
+  "src/resume.tex" 1757197781.55342 8155 a7a21a58ea4340c04e17f0e03e949af6 ""
   (generated)
   "resume.aux"
   "resume.log"
