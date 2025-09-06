@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.1)  6 SEP 2025 22:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.1)  6 SEP 2025 22:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -409,7 +409,7 @@ t/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/texl
 ive/texdir/texmf-dist/fonts/type1/urw/avantgar/uagd8a.pfb></opt/texlive/texdir/
 texmf-dist/fonts/type1/urw/avantgar/uagk8a.pfb></opt/texlive/texdir/texmf-dist/
 fonts/type1/urw/avantgar/uagko8a.pfb>
-Output written on resume.pdf (3 pages, 55929 bytes).
+Output written on resume.pdf (3 pages, 56120 bytes).
 PDF statistics:
  70 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream
