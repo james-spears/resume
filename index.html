@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="James Spears — Solution Architect specializing in Node.js and Angular for commercial banking. Toronto, ON.">
+<title>James Spears — Solution Architect</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:            #04091a;
+  --bg2:           #060d20;
+  --surface:       rgba(8, 20, 46, 0.85);
+  --surface-h:     rgba(12, 28, 60, 0.95);
+  --border:        #132240;
+  --border-h:      #1e3a6e;
+  --accent:        #0ea5e9;
+  --accent-b:      #38bdf8;
+  --accent-glow:   rgba(14, 165, 233, 0.12);
+  --gold:          #f59e0b;
+  --gold-dim:      rgba(245, 158, 11, 0.12);
+  --text:          #dde8f5;
+  --text-dim:      #8ba8c8;
+  --text-muted:    #3d5a7a;
+  --mono:          #7dd3fc;
+  --serif:         'Georgia', 'Palatino Linotype', 'Book Antiqua', serif;
+  --sans:          -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --mono-f:        'Courier New', 'Courier', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(circle, rgba(14,165,233,0.065) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* CRT scanline effect */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.018) 2px,
+    rgba(0,0,0,0.018) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Radial vignette */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 80% at 50% 10%, transparent 55%, rgba(4,9,26,0.75) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 28px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── HERO ── */
+header {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 0 72px;
+  position: relative;
+}
+
+.hero-kicker {
+  font-family: var(--mono-f);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: riseIn 0.7s cubic-bezier(.22,.68,0,1.2) forwards 0.15s;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(58px, 10vw, 108px);
+  font-weight: 400;
+  line-height: 0.93;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: riseIn 0.9s cubic-bezier(.22,.68,0,1.2) forwards 0.3s;
+}
+
+h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.hero-role {
+  font-family: var(--mono-f);
+  font-size: 13px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+  line-height: 2;
+  margin-bottom: 36px;
+  opacity: 0;
+  animation: riseIn 0.8s cubic-bezier(.22,.68,0,1.2) forwards 0.5s;
+}
+
+.hero-role .hi { color: var(--mono); }
+
+.hero-summary {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: var(--text-dim);
+  max-width: 560px;
+  margin-bottom: 52px;
+  opacity: 0;
+  animation: riseIn 0.8s cubic-bezier(.22,.68,0,1.2) forwards 0.65s;
+}
+
+.hero-nav {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: riseIn 0.8s cubic-bezier(.22,.68,0,1.2) forwards 0.8s;
+}
+
+.hn-link {
+  font-family: var(--mono-f);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.18s, border-color 0.18s;
+}
+
+.hn-link:hover { color: var(--accent-b); border-color: var(--accent); }
+
+.scroll-cue {
+  position: absolute;
+  bottom: 36px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  opacity: 0;
+  animation: riseIn 0.7s ease forwards 1.3s;
+}
+
+.scroll-cue span {
+  font-family: var(--mono-f);
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.scroll-track {
+  width: 48px;
+  height: 1px;
+  background: var(--border);
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-track::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: var(--accent);
+  animation: sweep 2.4s ease-in-out infinite 2s;
+}
+
+/* ── SECTIONS ── */
+section {
+  padding: 88px 0;
+  border-top: 1px solid var(--border);
+}
+
+.sec-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 52px;
+}
+
+.sec-idx {
+  font-family: var(--mono-f);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+/* ── EXPERIENCE ── */
+.xp-list { display: flex; flex-direction: column; gap: 0; }
+
+.xp-item {
+  display: grid;
+  grid-template-columns: 1px 1fr;
+  gap: 0 36px;
+  padding-bottom: 52px;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.xp-item.vis { opacity: 1; transform: translateY(0); }
+.xp-item:last-child { padding-bottom: 0; }
+
+.xp-spine {
+  background: linear-gradient(to bottom, var(--border-h), var(--border) 80%, transparent);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.xp-spine::before {
+  content: '';
+  position: absolute;
+  top: 7px; left: -5px;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: var(--bg2);
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow), 0 0 0 3px rgba(14,165,233,0.06);
+}
+
+.xp-body {}
+
+.xp-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.xp-co {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.xp-when {
+  font-family: var(--mono-f);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  white-space: nowrap;
+  padding-top: 4px;
+}
+
+.xp-role {
+  font-family: var(--mono-f);
+  font-size: 11.5px;
+  color: var(--mono);
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+
+.xp-ctx {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 16px;
+  line-height: 1.55;
+}
+
+.xp-pts {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.xp-pts li {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.65;
+  padding-left: 18px;
+  position: relative;
+}
+
+.xp-pts li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  color: var(--accent);
+  font-size: 9px;
+}
+
+.award {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(245,158,11,0.28);
+  color: var(--gold);
+  font-family: var(--mono-f);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  margin-left: 8px;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+/* ── PROJECTS ── */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 12px;
+}
+
+.proj-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 28px 28px 24px;
+  position: relative;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.proj-card.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.proj-card:hover {
+  border-color: var(--border-h);
+  background: var(--surface-h);
+  transform: translateY(-2px);
+}
+
+.proj-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-top: 2px solid var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.proj-card:hover::after { opacity: 1; }
+
+.proj-name {
+  font-family: var(--mono-f);
+  font-size: 15px;
+  color: var(--accent-b);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 12px;
+  transition: color 0.15s;
+}
+
+.proj-name:hover { color: var(--text); }
+
+.proj-desc {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.tag {
+  font-family: var(--mono-f);
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 2px 7px;
+  border-radius: 2px;
+}
+
+/* ── SKILLS ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  gap: 1px;
+  background: var(--border);
+}
+
+.sk {
+  background: var(--bg2);
+  padding: 14px 18px;
+  font-family: var(--mono-f);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.18s, color 0.18s;
+}
+
+.sk:hover { background: var(--accent-glow); color: var(--accent-b); }
+
+.sk-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+/* ── CERTS ── */
+.cert-list { display: flex; flex-direction: column; gap: 10px; }
+
+.cert {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 15px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: border-color 0.18s;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.cert.vis { opacity: 1; transform: translateY(0); }
+.cert:hover { border-color: var(--border-h); }
+
+.cert-id {
+  font-family: var(--mono-f);
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1px solid rgba(14,165,233,0.25);
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+.cert-title { font-size: 13px; color: var(--text-dim); }
+
+.cert-link {
+  font-family: var(--mono-f);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.cert-link:hover { color: var(--accent); }
+
+/* ── EDUCATION ── */
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.edu {
+  padding: 26px 24px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.edu-inst {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 7px;
+}
+
+.edu-deg {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.edu-yr {
+  font-family: var(--mono-f);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+}
+
+/* ── BEYOND ── */
+.beyond { display: flex; flex-direction: column; }
+
+.beyond-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.beyond-row:first-child { border-top: 1px solid var(--border); }
+
+.beyond-label {
+  font-family: var(--mono-f);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-top: 2px;
+}
+
+.beyond-txt {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+
+.beyond-txt a {
+  color: var(--text-dim);
+  text-decoration: underline;
+  text-decoration-color: var(--border-h);
+  text-underline-offset: 3px;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+
+.beyond-txt a:hover {
+  color: var(--accent-b);
+  text-decoration-color: var(--accent);
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 44px 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-name {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.footer-contact {
+  font-family: var(--mono-f);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.footer-contact a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.footer-contact a:hover { color: var(--accent-b); }
+
+/* ── ANIMATIONS ── */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sweep {
+  0%   { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 620px) {
+  .wrap { padding: 0 18px; }
+  .proj-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .edu-grid { grid-template-columns: 1fr; }
+  .cert { grid-template-columns: auto 1fr; }
+  .cert-link { display: none; }
+  .beyond-row { grid-template-columns: 1fr; gap: 6px; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ── HERO ── -->
+  <header>
+    <div class="hero-kicker">Toronto, ON &nbsp;·&nbsp; Solution Architect &nbsp;·&nbsp; Available for senior roles</div>
+
+    <h1>James<br>Spears<em>.</em></h1>
+
+    <div class="hero-role">
+      <span class="hi">Node.js</span> &amp; <span class="hi">Angular</span>
+      &nbsp;&nbsp;/&nbsp;&nbsp;
+      Commercial Banking
+      &nbsp;&nbsp;/&nbsp;&nbsp;
+      Full-Stack Engineering Leadership
+    </div>
+
+    <p class="hero-summary">
+      Solution Architect at BMO Financial Group, building enterprise web platforms
+      that serve millions of commercial banking customers. Deep expertise in Node.js
+      and Angular — from legacy AngularJS through to Angular 19. I lead teams,
+      architect systems, and ship things that win awards.
+    </p>
+
+    <nav class="hero-nav" aria-label="External links">
+      <a class="hn-link" href="mailto:james.w.spears@gmail.com">Email</a>
+      <a class="hn-link" href="https://github.com/james-spears" target="_blank" rel="noopener">GitHub</a>
+      <a class="hn-link" href="https://www.linkedin.com/in/james-spears-50834b8a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="hn-link" href="/resume.pdf" target="_blank" rel="noopener">Résumé PDF</a>
+    </nav>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <div class="scroll-track"></div>
+      <span>Scroll</span>
+    </div>
+  </header>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience">
+    <div class="sec-head">
+      <span class="sec-idx">[01]</span>
+      <h2>Experience</h2>
+    </div>
+
+    <div class="xp-list">
+
+      <div class="xp-item">
+        <div class="xp-spine"></div>
+        <div class="xp-body">
+          <div class="xp-top">
+            <span class="xp-co">BMO Financial Group</span>
+            <span class="xp-when">Jan 2022 — Present</span>
+          </div>
+          <div class="xp-role">Solution Architect · Online Banking for Business (OLBB)</div>
+          <div class="xp-ctx">8th largest bank in North America, serving 12M+ customers across diversified financial services.</div>
+          <ul class="xp-pts">
+            <li>Own end-to-end architecture and delivery of Angular front-end applications and their Node.js backend APIs across the OLBB commercial banking platform</li>
+            <li>Directed the OLBB-wide Angular upgrade programme — the largest front-end modernisation effort on the platform, migrating 30+ production applications from AngularJS, Angular 4, and Angular 7 to Angular 19; authored the foundational libraries and SDKs that enabled incremental migration across every UI surface</li>
+            <li>Tech lead on the OLBB <em>Getting Started Hub</em> — a content delivery platform designed to accelerate new commercial banking customer onboarding</li>
+            <li>Led engineering delivery of <em>Lexicon</em> — a dual-format Angular and Web Component design system for commercial banking<span class="award">★ Red Dot 2024</span></li>
+            <li>Recruit, mentor, and grow a team of full-stack engineers; established code-review processes, architectural standards, and a culture of continuous improvement</li>
+            <li>Collaborate with product owners and senior stakeholders to translate business requirements into scalable, maintainable technical solutions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="xp-item">
+        <div class="xp-spine"></div>
+        <div class="xp-body">
+          <div class="xp-top">
+            <span class="xp-co">WebsiteBox</span>
+            <span class="xp-when">Feb 2021 — Dec 2021</span>
+          </div>
+          <div class="xp-role">Node.js Developer</div>
+          <div class="xp-ctx">SaaS platform providing website hosting and WYSIWYG design tools to real estate agents and brokerages.</div>
+          <ul class="xp-pts">
+            <li>Built and maintained Angular and AngularJS front-end applications backed by Node.js/Express microservices</li>
+            <li>Drove the migration from a legacy billing system to Stripe, delivering reliable, PCI-compliant payment processing</li>
+            <li>Worked across a polyglot data layer: Elasticsearch, Apache Cassandra, and MySQL (MariaDB)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="xp-item">
+        <div class="xp-spine"></div>
+        <div class="xp-body">
+          <div class="xp-top">
+            <span class="xp-co">FliteX</span>
+            <span class="xp-when">Mar 2020 — Jun 2020</span>
+          </div>
+          <div class="xp-role">Full Stack Developer</div>
+          <div class="xp-ctx">Early-stage SaaS startup building a platform for AI-driven airline route optimization.</div>
+          <ul class="xp-pts">
+            <li>Prototyped a geospatial Angular SPA for interactive flight route visualization and optimization</li>
+            <li>Ported core algorithmic models from MATLAB to Python (NumPy, SciPy), improving iteration speed and testability</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="xp-item">
+        <div class="xp-spine"></div>
+        <div class="xp-body">
+          <div class="xp-top">
+            <span class="xp-co">Wysdom AI</span>
+            <span class="xp-when">Jun 2019 — Mar 2020</span>
+          </div>
+          <div class="xp-role">AI Automation Specialist</div>
+          <div class="xp-ctx">Enterprise virtual assistant and chatbot software for large telecoms, delivered via SaaS.</div>
+          <ul class="xp-pts">
+            <li>Designed and implemented automated chatbot regression testing in Python, reducing manual QA effort</li>
+            <li>Built web-based business process automation tools improving internal operational workflows</li>
+            <li>Contributed to a prototype audio-processing data pipeline using FFmpeg for ML training data preparation</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="sec-head">
+      <span class="sec-idx">[02]</span>
+      <h2>Projects</h2>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <a class="proj-name" href="https://clef.sh" target="_blank" rel="noopener">clef.sh ↗</a>
+        <p class="proj-desc">Secrets-as-code CLI tool. Built end-to-end using TDD and BDD with AI-assisted development via Claude Code.</p>
+        <div class="tags">
+          <span class="tag">CLI</span>
+          <span class="tag">Secrets Management</span>
+          <span class="tag">TDD / BDD</span>
+          <span class="tag">Claude Code</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <a class="proj-name" href="https://fastinvites.com" target="_blank" rel="noopener">Fast Invites ↗</a>
+        <p class="proj-desc">Threshold voting application for meeting link sharing and scheduling coordination. Lightweight full-stack SaaS.</p>
+        <div class="tags">
+          <span class="tag">Full Stack</span>
+          <span class="tag">SaaS</span>
+          <span class="tag">Voting System</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <a class="proj-name" href="https://video-summarizer.pages.dev/" target="_blank" rel="noopener">Video Summarizer ↗</a>
+        <p class="proj-desc">Client-side video summarization using WASM where available, Alpine.js, TailwindCSS, and the OpenAI API.</p>
+        <div class="tags">
+          <span class="tag">Alpine.js</span>
+          <span class="tag">WASM</span>
+          <span class="tag">OpenAI API</span>
+          <span class="tag">TailwindCSS</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <a class="proj-name" href="https://tripsultant.com" target="_blank" rel="noopener">Tripsultant ↗</a>
+        <p class="proj-desc">Map application with Angular 12 and NgRx for state management, backed by microservices in Golang and TypeScript.</p>
+        <div class="tags">
+          <span class="tag">Angular 12</span>
+          <span class="tag">NgRx</span>
+          <span class="tag">Golang</span>
+          <span class="tag">TypeScript</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="sec-head">
+      <span class="sec-idx">[03]</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="sk"><span class="sk-dot"></span>Node.js / Express</div>
+      <div class="sk"><span class="sk-dot"></span>Angular (2–19)</div>
+      <div class="sk"><span class="sk-dot"></span>TypeScript / JavaScript</div>
+      <div class="sk"><span class="sk-dot"></span>RESTful API Design</div>
+      <div class="sk"><span class="sk-dot"></span>Microservices</div>
+      <div class="sk"><span class="sk-dot"></span>Web Components</div>
+      <div class="sk"><span class="sk-dot"></span>React</div>
+      <div class="sk"><span class="sk-dot"></span>AWS</div>
+      <div class="sk"><span class="sk-dot"></span>Kubernetes / OpenShift</div>
+      <div class="sk"><span class="sk-dot"></span>CI/CD and IaC</div>
+      <div class="sk"><span class="sk-dot"></span>HTML / CSS</div>
+      <div class="sk"><span class="sk-dot"></span>Agile / Scrum</div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATIONS ── -->
+  <section id="certifications">
+    <div class="sec-head">
+      <span class="sec-idx">[04]</span>
+      <h2>Certifications</h2>
+    </div>
+    <div class="cert-list">
+      <div class="cert">
+        <span class="cert-id">SAP-C02</span>
+        <span class="cert-title">AWS Certified Solutions Architect — Professional</span>
+        <a class="cert-link" href="https://www.youracclaim.com/badges/6768bef0-a7c0-42a6-9b36-6e13351250be" target="_blank" rel="noopener">Verify ↗</a>
+      </div>
+      <div class="cert">
+        <span class="cert-id">JSNSD</span>
+        <span class="cert-title">OpenJS Node.js Services Developer</span>
+        <a class="cert-link" href="https://www.youracclaim.com/badges/d17570bd-2145-4cc2-9645-673fc3f6947e" target="_blank" rel="noopener">Verify ↗</a>
+      </div>
+      <div class="cert">
+        <span class="cert-id">JSNAD</span>
+        <span class="cert-title">OpenJS Node.js Application Developer</span>
+        <a class="cert-link" href="https://www.youracclaim.com/badges/76bcd62c-af5b-4957-b9ef-533403369d8d" target="_blank" rel="noopener">Verify ↗</a>
+      </div>
+      <div class="cert">
+        <span class="cert-id">SAA-C02</span>
+        <span class="cert-title">AWS Certified Solutions Architect — Associate</span>
+        <a class="cert-link" href="https://www.youracclaim.com/badges/4b572dd0-85e9-45f5-90f8-90a68cd3399f" target="_blank" rel="noopener">Verify ↗</a>
+      </div>
+      <div class="cert">
+        <span class="cert-id">CLF-C01</span>
+        <span class="cert-title">AWS Certified Cloud Practitioner</span>
+        <a class="cert-link" href="https://www.youracclaim.com/badges/48063b2f-6f7f-4b6c-a040-5c42393c4bc0" target="_blank" rel="noopener">Verify ↗</a>
+      </div>
+      <div class="cert">
+        <span class="cert-id">PCAP</span>
+        <span class="cert-title">Certified Associate in Python Programming</span>
+        <a class="cert-link" href="https://www.youracclaim.com/badges/bfd6aae6-1ab4-461b-8a62-f25cfb0bd29d" target="_blank" rel="noopener">Verify ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EDUCATION ── -->
+  <section id="education">
+    <div class="sec-head">
+      <span class="sec-idx">[05]</span>
+      <h2>Education</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu">
+        <div class="edu-inst">University of Waterloo</div>
+        <div class="edu-deg">Bachelor of Science, General Science</div>
+        <div class="edu-yr">2018</div>
+      </div>
+      <div class="edu">
+        <div class="edu-inst">Durham College</div>
+        <div class="edu-deg">Advanced Diploma, Electromechanical Engineering Technologist</div>
+        <div class="edu-yr">2011</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BEYOND ── -->
+  <section id="beyond">
+    <div class="sec-head">
+      <span class="sec-idx">[06]</span>
+      <h2>Beyond the Code</h2>
+    </div>
+    <div class="beyond">
+      <div class="beyond-row">
+        <span class="beyond-label">Publication</span>
+        <div class="beyond-txt">
+          <a href="https://www.nrcresearchpress.com/doi/abs/10.1139/cjp-2017-0089?journalCode=cjp#.X3Z1_GhKiUk" target="_blank" rel="noopener">"Approaching special relativity in complex time"</a>
+          &nbsp;—&nbsp; <em>Canadian Journal of Physics</em>, 95(10), 923–926 (2017).
+          Mathematical and theoretical physics, logic, set theory, and algebra.
+        </div>
+      </div>
+      <div class="beyond-row">
+        <span class="beyond-label">Competition</span>
+        <div class="beyond-txt">
+          <a href="https://teamwaterloop.ca/" target="_blank" rel="noopener">Waterloop</a>
+          — Team Leader, Magnetic Wheel subsystem. Competed at the SpaceX
+          <a href="https://en.wikipedia.org/wiki/Hyperloop_pod_competition" target="_blank" rel="noopener">Hyperloop Pod Competition</a>, 2017.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span class="footer-name">James Spears</span>
+    <span class="footer-contact">
+      <a href="mailto:james.w.spears@gmail.com">james.w.spears@gmail.com</a>
+      &nbsp;·&nbsp; Toronto, ON &nbsp;·&nbsp; (416) 827-3687
+    </span>
+  </footer>
+
+</div><!-- /.wrap -->
+
+<script>
+(function () {
+  // Staggered scroll-reveal via IntersectionObserver
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+
+      // If it's a container, stagger its children
+      const children = el.querySelectorAll('.xp-item, .proj-card, .cert');
+      if (children.length) {
+        children.forEach((child, i) => {
+          setTimeout(() => child.classList.add('vis'), i * 90);
+        });
+      } else {
+        el.classList.add('vis');
+      }
+
+      io.unobserve(el);
+    });
+  }, { threshold: 0.06 });
+
+  // Observe sections (for staggering children) and standalone reveal elements
+  document.querySelectorAll('section').forEach(s => io.observe(s));
+  document.querySelectorAll('.xp-item, .proj-card, .cert').forEach(el => {
+    // Only if not already handled by a section observer
+    io.observe(el);
+  });
+})();
+</script>
+
+</body>
+</html>
