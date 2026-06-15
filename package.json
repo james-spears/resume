@@ -1,6 +1,6 @@
 {
   "name": "@jameswspears/resume",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "James Spears' C.V.",
   "main": "index.js",
   "scripts": {
