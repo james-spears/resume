@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.1)  6 SEP 2025 22:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.1)  15 JUN 2026 17:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **src/resume.tex
 (./src/resume.tex
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-06-09>
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
 (./src/res.cls
 Document Style `res' <26 Sep 89>.
 Document Class: res 2000/05/19 v1.4b Resume class
@@ -25,7 +25,7 @@ File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \c@table=\count282
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen148
+\bibindent=\dimen150
 )
 No auxiliary output files.
 
@@ -34,10 +34,10 @@ No auxiliary output files.
 \tabular@tail=\toks19
 \@ta=\toks20
 \undefined@token=\toks21
-\sectionwidth=\dimen149
+\sectionwidth=\dimen151
 \sectionskip=\skip51
-\resumewidth=\dimen150
-\@columnwidth=\dimen151
+\resumewidth=\dimen152
+\@columnwidth=\dimen153
 \c@numberofcolumns=\count283
 ) (/opt/texlive/texdir/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
@@ -58,10 +58,10 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 106.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen152
-\Gin@req@width=\dimen153
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
 )
 (/opt/texlive/texdir/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
@@ -72,7 +72,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@floatcapt=\box54
 )
 (/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2025-06-21 v7.01n Hypertext links for LaTeX
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
 
 (/opt/texlive/texdir/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
@@ -104,7 +104,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
 (/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
@@ -118,19 +118,19 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 \c@section@level=\count285
 )
 (/opt/texlive/texdir/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count286
 )
 (/opt/texlive/texdir/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen154
+\@linkdim=\dimen156
 \Hy@linkcounter=\count287
 \Hy@pagecounter=\count288
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2025-06-21 v7.01n Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
@@ -140,25 +140,25 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 \Hy@SavedSpaceFactor=\count289
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2025-06-21 v7.01n Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4181.
-Package hyperref Info: Link nesting OFF on input line 4186.
-Package hyperref Info: Hyper index ON on input line 4189.
-Package hyperref Info: Plain pages OFF on input line 4196.
-Package hyperref Info: Backreferencing OFF on input line 4201.
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4448.
+Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count290
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4787.
-\XeTeXLinkMargin=\dimen155
+LaTeX Info: Redefining \url on input line 4807.
+\XeTeXLinkMargin=\dimen157
 
 (/opt/texlive/texdir/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -168,15 +168,15 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count291
-\Field@Width=\dimen156
-\Fld@charsize=\dimen157
-Package hyperref Info: Hyper figures OFF on input line 6066.
-Package hyperref Info: Link nesting OFF on input line 6071.
-Package hyperref Info: Hyper index ON on input line 6074.
-Package hyperref Info: backreferencing OFF on input line 6081.
-Package hyperref Info: Link coloring OFF on input line 6086.
-Package hyperref Info: Link coloring with OCG OFF on input line 6091.
-Package hyperref Info: PDF/A mode OFF on input line 6096.
+\Field@Width=\dimen158
+\Fld@charsize=\dimen159
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
 \Hy@abspage=\count292
 \c@Item=\count293
 \c@Hfootnote=\count294
@@ -184,7 +184,7 @@ Package hyperref Info: PDF/A mode OFF on input line 6096.
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2025-06-21 v7.01n Hyperref driver for pdfTeX
+File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
 \Fld@listcount=\count295
 \c@bookmark@seq@number=\count296
 
@@ -225,25 +225,25 @@ File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 Package: newcent 2020/03/25 PSNFSS-v9.3 (SPQR) 
 )
 (/opt/texlive/texdir/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2025/05/25 v2.0a multicolumn formatting (FMi)
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \c@tracingmulticols=\count297
 \mult@box=\box55
-\multicol@leftmargin=\dimen158
+\multicol@leftmargin=\dimen160
 \c@unbalance=\count298
 \c@collectmore=\count299
 \doublecol@number=\count300
 \multicoltolerance=\count301
 \multicolpretolerance=\count302
-\full@width=\dimen159
-\page@free=\dimen160
-\premulticols=\dimen161
-\postmulticols=\dimen162
+\full@width=\dimen161
+\page@free=\dimen162
+\premulticols=\dimen163
+\postmulticols=\dimen164
 \multicolsep=\skip53
 \multicolbaselineskip=\skip54
 \partial@page=\box56
 \last@line=\box57
 \mc@boxedresult=\box58
-\maxbalancingoverflow=\dimen163
+\maxbalancingoverflow=\dimen165
 \mult@rightbox=\box59
 \mult@grightbox=\box60
 \mult@firstbox=\box61
@@ -287,9 +287,9 @@ Package: multicol 2025/05/25 v2.0a multicolumn formatting (FMi)
 \c@minrows=\count303
 \c@columnbadness=\count304
 \c@finalcolumnbadness=\count305
-\last@try=\dimen164
-\multicolovershoot=\dimen165
-\multicolundershoot=\dimen166
+\last@try=\dimen166
+\multicolovershoot=\dimen167
+\multicolundershoot=\dimen168
 \mult@nat@firstbox=\box99
 \colbreak@box=\box100
 \mc@col@check@num=\count306
@@ -302,7 +302,7 @@ LaTeX Font Info:    Trying to load font information for OT1+pag on input line 1
 File: ot1pag.fd 2001/06/04 font definitions for OT1/pag.
 )
 (/opt/texlive/texdir/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count308
 )
 (./resume.aux)
@@ -328,13 +328,13 @@ LaTeX Font Info:    ... okay on input line 13.
 (/opt/texlive/texdir/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count309
-\scratchdimen=\dimen167
+\scratchdimen=\dimen169
 \scratchbox=\box101
 \nofMPsegments=\count310
 \nofMParguments=\count311
 \everyMPshowfont=\toks25
 \MPscratchCnt=\count312
-\MPscratchDim=\dimen168
+\MPscratchDim=\dimen170
 \MPnumerator=\count313
 \makeMPintoPDFobject=\count314
 \everyMPtoPDFconversion=\toks26
@@ -355,6 +355,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 16.
 LaTeX Font Info:    Font shape `OT1/pag/b/n' in size <12> not available
 (Font)              Font shape `OT1/pag/db/n' tried instead on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 16.
 LaTeX Font Info:    Font shape `OT1/pag/b/n' in size <10> not available
 (Font)              Font shape `OT1/pag/db/n' tried instead on input line 18.
 LaTeX Font Info:    Trying to load font information for TS1+pag on input line 2
@@ -362,57 +368,79 @@ LaTeX Font Info:    Trying to load font information for TS1+pag on input line 2
 (/opt/texlive/texdir/texmf-dist/tex/latex/psnfss/ts1pag.fd
 File: ts1pag.fd 2001/06/04 font definitions for TS1/pag.
 )
+Underfull \hbox (badness 1331) in paragraph at lines 57--57
+[]\OT1/pag/m/n/10 Solution Ar-chi-tect - [][]BMO Fi-nan-cial Group
+ []
 
+
+Overfull \hbox (0.13327pt too wide) in paragraph at lines 62--63
+[]\OT1/pag/m/n/10 Directed the OLBB-wide An-gu-lar up-grade pro-gramme | the la
+rgest front-
+ []
+
+LaTeX Font Info:    Font shape `OT1/pag/m/it' in size <10> not available
+(Font)              Font shape `OT1/pag/m/sl' tried instead on input line 63.
 [1
 
 {/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/opt/texlive
 /texdir/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (10.46764pt too wide) in paragraph at lines 123--124
-[]\OT1/pag/m/n/10 JavaScript/TypeScript 
+Overfull \hbox (2.06213pt too wide) in paragraph at lines 66--67
+[]\OT1/pag/m/n/10 Collaborate with prod-uct own-ers and se-nior stake-hold-ers 
+to trans-late busi-
  []
 
 
-Overfull \hbox (13.38766pt too wide) in paragraph at lines 128--129
-[]\OT1/pag/m/n/10 Kubernetes/OpenShift 
+Overfull \hbox (9.5627pt too wide) in paragraph at lines 80--81
+[]\OT1/pag/m/n/10 Built and main-tained An-gu-lar and An-gu-larJS front-end ap-
+pli-ca-tions backed
  []
 
 
+Overfull \hbox (1.38498pt too wide) in paragraph at lines 82--83
+[]\OT1/pag/m/n/10 Worked across a poly-glot data layer in-clud-ing Elas-tic-sea
+rch, Apache Cas-
+ []
 
 
+Overfull \hbox (16.78284pt too wide) in paragraph at lines 108--109
+[]\OT1/pag/m/n/10 Designed and im-ple-mented au-to-mated chat-bot re-gres-sion 
+test-ing in Python,
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+[]\OT1/pag/m/n/10 TypeScript /
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+[]\OT1/pag/m/n/10 Kubernetes /
+ []
 
-LaTeX Font Info:    Font shape `OT1/pag/m/it' in size <10> not available
-(Font)              Font shape `OT1/pag/m/sl' tried instead on input line 138.
-
-
-[2]
-
-[3]
+[2] [3]
  ***********
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-06-09>
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9308 strings out of 467888
- 143631 string characters out of 5436152
- 571761 words of memory out of 5000000
- 37773 multiletter control sequences out of 15000+600000
- 635253 words of font info for 50 fonts, out of 8000000 for 9000
+ 9336 strings out of 467349
+ 144000 string characters out of 5417750
+ 580742 words of memory out of 5000000
+ 38325 multiletter control sequences out of 15000+600000
+ 638885 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,331b,561s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,84p,408b,561s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></op
 t/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/texl
-ive/texdir/texmf-dist/fonts/type1/urw/avantgar/uagd8a.pfb></opt/texlive/texdir/
-texmf-dist/fonts/type1/urw/avantgar/uagk8a.pfb></opt/texlive/texdir/texmf-dist/
-fonts/type1/urw/avantgar/uagko8a.pfb>
-Output written on resume.pdf (3 pages, 56141 bytes).
+ive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/texlive/t
+exdir/texmf-dist/fonts/type1/urw/avantgar/uagd8a.pfb></opt/texlive/texdir/texmf
+-dist/fonts/type1/urw/avantgar/uagk8a.pfb></opt/texlive/texdir/texmf-dist/fonts
+/type1/urw/avantgar/uagko8a.pfb>
+Output written on resume.pdf (3 pages, 68426 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 75 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  4 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
