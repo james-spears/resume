@@ -20,9 +20,9 @@
   --accent-glow:   rgba(14, 165, 233, 0.12);
   --gold:          #f59e0b;
   --gold-dim:      rgba(245, 158, 11, 0.12);
-  --text:          #dde8f5;
-  --text-dim:      #8ba8c8;
-  --text-muted:    #3d5a7a;
+  --text:          #e4eef8;
+  --text-dim:      #a8c4dc;
+  --text-muted:    #7090b0;
   --mono:          #7dd3fc;
   --serif:         'Georgia', 'Palatino Linotype', 'Book Antiqua', serif;
   --sans:          -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -295,7 +295,7 @@ h2 {
 
 .xp-ctx {
   font-size: 13px;
-  color: var(--text-muted);
+  color: var(--text-dim);
   font-style: italic;
   margin-bottom: 16px;
   line-height: 1.55;
@@ -354,7 +354,7 @@ h2 {
   border: 1px solid var(--border);
   padding: 28px 28px 24px;
   position: relative;
-  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  transition: border-color 0.2s, background 0.2s, transform 0.5s ease, opacity 0.5s ease;
   opacity: 0;
   transform: translateY(16px);
 }
@@ -457,7 +457,7 @@ h2 {
   padding: 15px 20px;
   background: var(--surface);
   border: 1px solid var(--border);
-  transition: border-color 0.18s;
+  transition: border-color 0.18s, opacity 0.45s ease, transform 0.45s ease;
   opacity: 0;
   transform: translateY(10px);
 }
@@ -783,17 +783,6 @@ footer {
         </div>
       </div>
 
-      <div class="proj-card">
-        <a class="proj-name" href="https://tripsultant.com" target="_blank" rel="noopener">Tripsultant ↗</a>
-        <p class="proj-desc">Map application with Angular 12 and NgRx for state management, backed by microservices in Golang and TypeScript.</p>
-        <div class="tags">
-          <span class="tag">Angular 12</span>
-          <span class="tag">NgRx</span>
-          <span class="tag">Golang</span>
-          <span class="tag">TypeScript</span>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -805,7 +794,7 @@ footer {
     </div>
     <div class="skills-grid">
       <div class="sk"><span class="sk-dot"></span>Node.js / Express</div>
-      <div class="sk"><span class="sk-dot"></span>Angular (2–19)</div>
+      <div class="sk"><span class="sk-dot"></span>Angular</div>
       <div class="sk"><span class="sk-dot"></span>TypeScript / JavaScript</div>
       <div class="sk"><span class="sk-dot"></span>RESTful API Design</div>
       <div class="sk"><span class="sk-dot"></span>Microservices</div>
@@ -897,7 +886,7 @@ footer {
       <div class="beyond-row">
         <span class="beyond-label">Competition</span>
         <div class="beyond-txt">
-          <a href="https://teamwaterloop.ca/" target="_blank" rel="noopener">Waterloop</a>
+          <a href="https://en.wikipedia.org/wiki/Hyperloop_pod_competition" target="_blank" rel="noopener">Waterloop</a>
           — Team Leader, Magnetic Wheel subsystem. Competed at the SpaceX
           <a href="https://en.wikipedia.org/wiki/Hyperloop_pod_competition" target="_blank" rel="noopener">Hyperloop Pod Competition</a>, 2017.
         </div>
