@@ -16,11 +16,7 @@ jobs:
       - run: git config --global user.email 'james.w.spears@gmail.com'
 
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: src/resume.tex
-        env:
-          TEXINPUTS: ".:./src//:"
+        run: make pdf
 
       - name: Git pull
         run: git pull
@@ -44,13 +40,8 @@ jobs:
       - run: git config --global user.name 'James Spears 🤖'
       - run: git config --global user.email 'james.w.spears@gmail.com'
 
-      - name: Compile LaTeX document
-        uses: docker://pandoc/core:2.9
-        with:
-          args: >- # allows you to break string into multiple lines
-            -s ./src/resume.tex
-            -o resume.docx 
-            --resource-path ./src
+      - name: Compile DOCX document
+        run: make docx
 
       - name: Git pull
         run: git pull
