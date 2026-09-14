@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  14 SEP 2026 00:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  14 SEP 2026 00:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -357,11 +357,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 16.
-
-Overfull \hbox (101.88765pt too wide) detected at line 16
- [] 
- []
-
 LaTeX Font Info:    Font shape `OT1/pag/b/n' in size <10> not available
 (Font)              Font shape `OT1/pag/db/n' tried instead on input line 18.
 LaTeX Font Info:    Trying to load font information for TS1+pag on input line 2
