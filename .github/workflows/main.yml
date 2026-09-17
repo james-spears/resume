@@ -112,6 +112,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Git pull
+        run: git pull
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -134,6 +138,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Git pull
+        run: git pull
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
