@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  14 SEP 2026 00:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  17 SEP 2026 13:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -357,6 +357,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 16.
+
+Overfull \hbox (90.7997pt too wide) detected at line 16
+ [] 
+ []
+
 LaTeX Font Info:    Font shape `OT1/pag/b/n' in size <10> not available
 (Font)              Font shape `OT1/pag/db/n' tried instead on input line 18.
 LaTeX Font Info:    Trying to load font information for TS1+pag on input line 2
@@ -374,26 +379,33 @@ Underfull \hbox (badness 1331) in paragraph at lines 58--58
  []
 
 
-Overfull \hbox (0.13327pt too wide) in paragraph at lines 63--64
+Overfull \hbox (0.4843pt too wide) in paragraph at lines 62--63
+\OT1/pag/m/n/10 ers, defin-ing ar-chi-tec-ture pat-terns and trans-lat-ing en-t
+er-prise re-quire-ments
+ []
+
+
+Overfull \hbox (0.73177pt too wide) in paragraph at lines 62--63
+\OT1/pag/m/n/10 into scal-able plat-form so-lu-tions across the OLBB com-mer-ci
+al bank-ing plat-
+ []
+
+
+Overfull \hbox (0.13327pt too wide) in paragraph at lines 64--65
 []\OT1/pag/m/n/10 Directed the OLBB-wide An-gu-lar up-grade pro-gramme | the la
 rgest front-
  []
 
-LaTeX Font Info:    Font shape `OT1/pag/m/it' in size <10> not available
-(Font)              Font shape `OT1/pag/m/sl' tried instead on input line 64.
 [1
 
 {/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/opt/texlive
 /texdir/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (8.07233pt too wide) in paragraph at lines 66--67
-\OT1/pag/m/n/10 ser-vice to de-tect call spoof-ing/fraud and a Con-tact Lens tr
-anscript-analysis
- []
+LaTeX Font Info:    Font shape `OT1/pag/m/it' in size <10> not available
+(Font)              Font shape `OT1/pag/m/sl' tried instead on input line 65.
 
-
-Overfull \hbox (2.06213pt too wide) in paragraph at lines 69--70
-[]\OT1/pag/m/n/10 Collaborate with prod-uct own-ers and se-nior stake-hold-ers 
-to trans-late busi-
+Overfull \hbox (4.96472pt too wide) in paragraph at lines 67--68
+[]\OT1/pag/m/n/10 Architected AI-driven contact-centre in-te-gra-tions (Ama-zon
+ Con-nect, AWS
  []
 
 
@@ -415,23 +427,28 @@ test-ing in Python,
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 []\OT1/pag/m/n/10 TypeScript /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
-[]\OT1/pag/m/n/10 Kubernetes /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
 []\OT1/pag/m/n/10 ServiceNow In-te-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 []\OT1/pag/m/n/10 AWS Bedrock /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+[]\OT1/pag/m/n/10 Angular / Web
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+[]\OT1/pag/m/n/10 Kubernetes /
  []
 
 [3]
@@ -447,14 +464,14 @@ Here is how much of TeX's memory you used:
  38541 multiletter control sequences out of 15000+600000
  638885 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,7n,84p,421b,561s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,7n,84p,421b,557s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></op
 t/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/texl
 ive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/texlive/t
 exdir/texmf-dist/fonts/type1/urw/avantgar/uagd8a.pfb></opt/texlive/texdir/texmf
 -dist/fonts/type1/urw/avantgar/uagk8a.pfb></opt/texlive/texdir/texmf-dist/fonts
 /type1/urw/avantgar/uagko8a.pfb>
-Output written on resume.pdf (3 pages, 69091 bytes).
+Output written on resume.pdf (3 pages, 69276 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream
