@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - run: git config --global user.name 'James Spears 🤖'
       - run: git config --global user.email 'james.w.spears@gmail.com'
@@ -35,7 +35,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - run: git config --global user.name 'James Spears 🤖'
       - run: git config --global user.email 'james.w.spears@gmail.com'
@@ -60,7 +60,7 @@ jobs:
     needs: [autogenerate-pdf, autogenerate-docx]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - run: git config --global user.name 'James Spears 🤖'
       - run: git config --global user.email 'james.w.spears@gmail.com'
@@ -83,7 +83,7 @@ jobs:
         run: git push origin ${{ env.version }}
 
       - name: Create release
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           RELEASE_TAG: ${{ env.version }}
         with:
@@ -111,13 +111,13 @@ jobs:
     needs: version-bump
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Git pull
         run: git pull
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::989966476585:role/ci
           aws-region: us-east-1
@@ -137,19 +137,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Git pull
         run: git pull
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v6
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
